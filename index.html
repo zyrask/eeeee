@@ -64,6 +64,77 @@
         </div>
     </section>
 
+    <!-- Get Started Section -->
+    <section id="get-started" class="py-20 relative z-10">
+        <div class="container mx-auto px-6">
+            <h2 class="font-space font-bold text-4xl md:text-5xl text-center mb-16 glow-text tracking-wide scroll-animate" style="color: #ff0000!important;">
+                Get Started
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="code-editor-container scroll-animate">
+                    <!-- macOS Window Controls -->
+                    <div class="code-editor-header">
+                        <div class="window-controls">
+                            <div class="control close"></div>
+                            <div class="control minimize"></div>
+                            <div class="control maximize"></div>
+                        </div>
+                        <div class="file-tab">
+                            <span class="font-jetbrains text-sm">loader.lua</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Code Content -->
+                    <div class="code-editor-content">
+                        <div class="line-numbers">
+                            <span>1</span>
+                        </div>
+                        <div class="code-text">
+                            <span class="comment">-- H4xScripts Universal Loader</span><br>
+                            <span class="function">loadstring</span>(<span class="method">game</span>:<span class="method">HttpGet</span>(<span class="string">"https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua"</span>, <span class="boolean">true</span>))()
+                        </div>
+                    </div>
+                    
+                    <!-- Copy Button -->
+                    <div class="code-editor-footer">
+                        <button id="copyScriptButton" class="copy-code-btn">
+                            <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            Copy Script
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Success Notification -->
+                <div id="copySuccessMessage" class="copy-success hidden">
+                    <div class="success-content">
+                        <svg class="success-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="20,6 9,17 4,12"></polyline>
+                        </svg>
+                        <span>Script copied to clipboard!</span>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="font-inter text-lg text-gray-300 mb-6">
+                        Paste this script into your Roblox executor and enjoy premium exploits
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="https://discord.gg/gmvq3VsJ2v" target="_blank" class="glow-button px-6 py-3 font-inter font-semibold">
+                            Join Discord for Support
+                        </a>
+                        <a href="#how-it-works" class="outline-button px-6 py-3 font-inter font-semibold">
+                            Learn How It Works
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Supported Scripts Section -->
     <section id="scripts" class="py-20 relative z-10">
         <div class="container mx-auto px-6">
@@ -165,77 +236,6 @@
                     <div class="step-number">04</div>
                     <h3 class="font-inter font-bold text-xl mb-3">Start exploiting</h3>
                     <p class="text-gray-400 font-inter">Enjoy premium scripts and automation features</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Get Started Section -->
-    <section id="get-started" class="py-20 relative z-10">
-        <div class="container mx-auto px-6">
-            <h2 class="font-space font-bold text-4xl md:text-5xl text-center mb-16 glow-text tracking-wide scroll-animate" style="color: #ff0000!important;">
-                Get Started
-            </h2>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="code-editor-container scroll-animate">
-                    <!-- macOS Window Controls -->
-                    <div class="code-editor-header">
-                        <div class="window-controls">
-                            <div class="control close"></div>
-                            <div class="control minimize"></div>
-                            <div class="control maximize"></div>
-                        </div>
-                        <div class="file-tab">
-                            <span class="font-jetbrains text-sm">loader.lua</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Code Content -->
-                    <div class="code-editor-content">
-                        <div class="line-numbers">
-                            <span>1</span>
-                        </div>
-                        <div class="code-text">
-                            <span class="comment">-- H4xScripts Universal Loader</span><br>
-                            <span class="function">loadstring</span>(<span class="method">game</span>:<span class="method">HttpGet</span>(<span class="string">"https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua"</span>, <span class="boolean">true</span>))()
-                        </div>
-                    </div>
-                    
-                    <!-- Copy Button -->
-                    <div class="code-editor-footer">
-                        <button id="copyScriptButton" class="copy-code-btn">
-                            <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                            </svg>
-                            Copy Script
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Success Notification -->
-                <div id="copySuccessMessage" class="copy-success hidden">
-                    <div class="success-content">
-                        <svg class="success-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <polyline points="20,6 9,17 4,12"></polyline>
-                        </svg>
-                        <span>Script copied to clipboard!</span>
-                    </div>
-                </div>
-                
-                <div class="text-center mt-12">
-                    <p class="font-inter text-lg text-gray-300 mb-6">
-                        Paste this script into your Roblox executor and enjoy premium exploits
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <a href="https://discord.gg/gmvq3VsJ2v" target="_blank" class="glow-button px-6 py-3 font-inter font-semibold">
-                            Join Discord for Support
-                        </a>
-                        <a href="#how-it-works" class="outline-button px-6 py-3 font-inter font-semibold">
-                            Learn How It Works
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
