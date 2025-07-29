@@ -147,14 +147,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add glitch effect to logo periodically
     const logo = document.querySelector('.logo-glow');
-    if (logo) {
-        setInterval(() => {
-            logo.style.filter = 'hue-rotate(180deg) brightness(1.2)';
-            setTimeout(() => {
-                logo.style.filter = 'none';
-            }, 100);
-        }, 5000);
-    }
+    setInterval(() => {
+        logo.style.filter = 'hue-rotate(180deg) brightness(1.2)';
+        setTimeout(() => {
+            logo.style.filter = 'none';
+        }, 100);
+    }, 5000);
     
     // Parallax effect for background
     window.addEventListener('scroll', () => {
@@ -168,30 +166,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add typing effect to motto
     const motto = document.querySelector('.motto');
-    if (motto) {
-        const mottoText = 'Inject. Exploit. Exit.';
-        let mottoIndex = 0;
-        
-        function typeMotto() {
-            if (mottoIndex < mottoText.length) {
-                motto.textContent = mottoText.slice(0, mottoIndex + 1);
-                mottoIndex++;
-                setTimeout(typeMotto, 100);
-            } else {
-                setTimeout(() => {
-                    mottoIndex = 0;
-                    motto.textContent = '';
-                    setTimeout(typeMotto, 2000);
-                }, 3000);
-            }
+    const mottoText = 'Inject. Exploit. Exit.';
+    let mottoIndex = 0;
+    
+    function typeMotto() {
+        if (mottoIndex < mottoText.length) {
+            motto.textContent = mottoText.slice(0, mottoIndex + 1);
+            mottoIndex++;
+            setTimeout(typeMotto, 100);
+        } else {
+            setTimeout(() => {
+                mottoIndex = 0;
+                motto.textContent = '';
+                setTimeout(typeMotto, 2000);
+            }, 3000);
         }
-        
-        // Start typing effect after page load
-        setTimeout(() => {
-            motto.textContent = '';
-            typeMotto();
-        }, 1000);
     }
+    
+    // Start typing effect after page load
+    setTimeout(() => {
+        motto.textContent = '';
+        typeMotto();
+    }, 1000);
     
     // Mobile menu toggle (if needed)
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
@@ -242,20 +238,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add loading animation for images
     const images = document.querySelectorAll('img');
-    if (images && images.length > 0) {
-        images.forEach(img => {
-            if (img) {
-                img.addEventListener('load', function() {
-                    this.style.opacity = '1';
-                });
-                
-                img.addEventListener('error', function() {
-                    this.style.opacity = '0.5';
-                    console.warn('Failed to load image:', this.src);
-                });
-            }
+    images.forEach(img => {
+        img.addEventListener('load', function() {
+            this.style.opacity = '1';
         });
-    }
+        
+        img.addEventListener('error', function() {
+            this.style.opacity = '0.5';
+            console.warn('Failed to load image:', this.src);
+        });
+    });
 });
 
 // Add custom cursor effect
